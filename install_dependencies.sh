@@ -21,8 +21,6 @@ sudo ninja -C build install
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-
-
 #copie des fichiers de configuration
 mkdir -p ~/.config/{bspwm,sxhkd}
 cp /usr/local/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
@@ -36,3 +34,4 @@ cargo build --release
 
 #installation de spotify-tui
 sudo cp bin/spt /bin/.
+
