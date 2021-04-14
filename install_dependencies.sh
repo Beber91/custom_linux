@@ -1,5 +1,5 @@
 #! /bin/sh
-sudo apt install polybar libgl1-mesa-dev libpulse0 libpulse-dev libxext6 libxext-dev libxrender-dev libxcomposite-dev liblua5.3-dev liblua5.3 lua-lgi lua-filesystem libobs0 libobs-dev meson build-essential gcc libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev i3 zsh
+sudo apt install polybar libgl1-mesa-dev libpulse0 libpulse-dev libxext6 libxext-dev libxrender-dev libxcomposite-dev liblua5.3-dev liblua5.3 lua-lgi lua-filesystem libobs0 libobs-dev meson build-essential gcc libxcb-xinerama0-dev libxcb-icccm4-dev libxcb-randr0-dev libxcb-util0-dev libxcb-ewmh-dev libxcb-keysyms1-dev libxcb-shape0-dev i3 zsh rustc cargo libasound2-dev libssl-dev pkg-config
 sudo ldconfig
 
 #installation des fonts
@@ -28,3 +28,11 @@ mkdir -p ~/.config/{bspwm,sxhkd}
 cp /usr/local/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
 cp /usr/local/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 chmod u+x ~/.config/bspwm/bspwmrc
+
+# installation de spotifyd
+git clone https://github.com/Spotifyd/spotifyd.git
+cd spotifyd
+cargo build --release
+
+#installation de spotify-tui
+sudo cp bin/spt /bin/.

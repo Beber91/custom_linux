@@ -1,4 +1,0 @@
-#! /bin/sh
-sudo apt install polybar libgl1-mesa-dev libpulse0 libpulse-dev libxext6 libxext-dev libxrender-dev libxcomposite-dev liblua5.3-dev liblua5.3 lua-lgi lua-filesystem libobs0 libobs-dev meson build-essential gcc
-
-sudo ldconfig
